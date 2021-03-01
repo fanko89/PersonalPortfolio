@@ -1,11 +1,15 @@
+
+
+
 :root {
     --white: rgb(247, 243, 236);
     --brown: rgb(112, 84, 24);
     --tan: rgb(172, 159, 131);
+    --light_tan: rgba(158, 139, 102, 0.267);
     --hover:  rgba(218, 218, 218, 0.144);
-    --blue: rgb(75, 145, 173);
+    --blue: rgb(140, 163, 157);
     --black: rgb(17, 19, 20);
-    --gray: rgb(109, 109, 109);
+    --gray: rgb(202, 202, 202);
     
 }
 
@@ -14,15 +18,28 @@
     padding: 0;
     box-sizing:border-box;
 }
+
+html{
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+
 body{
     
     font-family: 'Akaya Kanadaka', cursive;
     font-family: 'Permanent Marker', cursive;
 
 }
-h1{
+h1  {
+    color: var(--black);
    
     font-family: 'Permanent Marker', cursive;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    
 }
 
 #navbar{
@@ -67,17 +84,25 @@ h1{
     justify-content: center;
     align-items: center;
     background-color:var(--gray);
+    background-image: linear-gradient(180deg, rgb(96, 154, 161), rgba(72, 78, 40, 0.349));
     color:var(--blue);
     width: 100%;
     height: 100vh;
 }
 #projects{
+    
     display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content:center;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    background-color:var(--light_tan);
+    height: 45em;
+    
+    
     
 }
 .project-tile{
+    display: flex;
     margin: .4em;
 
 }
@@ -112,30 +137,45 @@ li > a{
     height: 240px;
     border-radius: 10px;
 }
-a {
-    text-decoration: none;
-    display: block;
-    
-}
+
 #contact{
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--blue);
+    background-color:var(--gray);
+    background-image: linear-gradient(180deg,  rgba(72, 78, 40, 0.349), rgb(96, 154, 161));
     height: 30vh;
 }
+#contact_info{
+    color: var(--black);
+    text-align: center;
+}
+
+.contact-links {
+    display: flex; 
+    justify-content: space-between;
+}
+.contact-links a {
+    margin:1em;
+    color: var(--white);
+}
+
 footer{
     display: flex;
-
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
     background-color: var(--tan);
     height: 60px;
     color: var(--black);
     font-family: 'Gloria Hallelujah', cursive;
 }
+footer p {
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
 @media(max-width: 1200px){
     html{ 
         font-size:100%;
