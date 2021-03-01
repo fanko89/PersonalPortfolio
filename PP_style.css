@@ -15,7 +15,7 @@
     box-sizing:border-box;
 }
 body{
-    color:var(--blue)
+    
     font-family: 'Akaya Kanadaka', cursive;
     font-family: 'Permanent Marker', cursive;
 
@@ -45,7 +45,7 @@ h1{
 }
     
 .nav_text {
-    color:var(--white)
+    color:var(--white);
     display: block;
     padding: 15px;
     font-size: 1.5em;  
