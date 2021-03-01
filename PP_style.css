@@ -40,6 +40,12 @@ h2 {
     font-size: 210%;
     text-align: center;
 }
+h3 {
+    font-size: 280%;
+    font-family: 'Akaya Kanadaka', cursive;
+    text-align: center;
+}
+
 
 a {
     text-decoration: none;
@@ -48,11 +54,12 @@ a {
 }
 
 #navbar{
+    overflow:hidden;
     display:flex;
     justify-content: flex-end;
     position: fixed;
     top:0;
-    left:0;
+
     width: 100%;
     z-index: 10px;
     background-color:var(--tan);
@@ -69,8 +76,10 @@ a {
 .nav_text {
     color:var(--white);
     display: block;
-    padding: 15px;
-    font-size: 1.5em;  
+    padding: 12px;
+    font-size: 1.9em;
+    text-shadow: 1px 1px 2px #3d3d3d;
+    transition: transform 0.2s ease-out;  
 }
 
 
@@ -103,27 +112,54 @@ a {
     justify-content:space-around;
     align-items: center;
     background-color:var(--light_tan);
-    height: 45em;
+    height: 65em;
     
     
     
 }
+#projects h3 {
+    text-align: center;
+    width:70%;
+    border-bottom: 3px solid var(--gray) ;
+    text-shadow: 10px;
+
+
+}
+.grid {
+    grid-template-columns: 1fr;
+  }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+
 .project-tile{
     display: flex;
     margin: .4em;
+    
 
 }
 .project-tile:hover {
     color:var(--hover);
+        transform: translateY(4px);
+     
+      
 }
 
 
 
 figcaption{
-    position: relative;
+    position:relative;
+    align-items: center;
     height: 50px;
     font-size: 170%;
-    bottom: 25px;
+    bottom: 22px;
     color:var(--black);
         text-align: center;
         background-color:var(--gray);
@@ -153,6 +189,7 @@ li > a{
 
 
 .studio{
+    position:static;
     width:360px;
     height: 240px;
     border-radius: 10px;
@@ -172,15 +209,23 @@ li > a{
     color: var(--black);
     font-size: 110%;
     text-align: center;
+    
 }
 
 .contact-links {
     display: flex; 
     justify-content: space-between;
+    
 }
 .contact-links a {
+    display: block;
+    padding-top: 35px;
+    font-size: 1.4em;
     margin:1em;
     color: var(--white);
+    text-shadow: 1.5px 2px 2px #1f1f1f;
+    transition: transform 0.2s ease-out;
+    
 }
 
 footer{
@@ -188,7 +233,7 @@ footer{
     justify-content:space-between;
     align-items: center;
     background-color: var(--tan);
-    height: 60px;
+    height: 15%;
     color: var(--black);
     font-family: 'Gloria Hallelujah', cursive;
 }
@@ -221,7 +266,7 @@ footer p {
         
     }
     .studio{
-        width:100px;
+        width:110px;
         height:75px;
 
 
