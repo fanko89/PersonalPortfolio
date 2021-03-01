@@ -141,13 +141,16 @@ a {
 
 .project-tile{
     display: flex;
+
+    justify-content: center;
+    align-items: center;
     margin: .4em;
     
 
 }
 .project-tile:hover {
     color:var(--hover);
-        transform: translateY(4px);
+     transform: translateY(5px);
      
       
 }
@@ -155,27 +158,25 @@ a {
 
 
 figcaption{
-    position:relative;
-    align-items: center;
+   position: relative;
+   text-align: center;
     height: 50px;
     font-size: 170%;
     bottom: 22px;
     color:var(--black);
-        text-align: center;
-        background-color:var(--gray);
+    background-color:var(--gray);
 
 }
 
 figcaption > span {
     color:var(--blue);
-    
-    
     display: none;
 
   }
   figcaption:hover > span {
       display:contents;
       font-size: 100% ;
+      transform: translateY(4px);
   } 
 
 li > a{
