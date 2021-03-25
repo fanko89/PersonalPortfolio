@@ -51,3 +51,5 @@ function populateDOM(characters) {
 
 
 
+
+
