@@ -4,6 +4,8 @@
 }
 
 #main {
+    font-family: 'Akaya Kanadaka', cursive;
+    font-family: 'Permanent Marker', cursive;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
