@@ -29,7 +29,7 @@ html{
     position: fixed;
     top:0;
     width: 100%;
-    z-index: 10;
+    z-index: 10px;
     background-color:var(--gray);
 
 
@@ -69,10 +69,6 @@ h1  {
     border:rgb(247, 243, 236);
     border-style: dotted;
 }
-
-
-
-
 #filmList {
     display: flex;
     flex-wrap: wrap;

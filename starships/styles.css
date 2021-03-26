@@ -1,34 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    
+}
 :root {
     margin: 0;
     box-sizing: border-box;
+    --white: rgb(247, 243, 236);
+    --brown: rgb(112, 84, 24);
+    --tan: rgb(172, 159, 131);
+    --light_tan: rgba(158, 139, 102, 0.267);
+    --hover:  rgba(218, 218, 218, 0.144);
+    --blue: rgb(140, 163, 157);
+    --black: rgb(17, 19, 20);
+    --gray: rgb(202, 202, 202);
+}
+html{
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+    background-color:var(--black);
+}
+#navbar{
+    overflow:hidden;
+    display:flex;
+    justify-content: flex-end;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+    background-color:var(--gray);
+
+
+}
+
+.nav-list{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;  
+    
+}
+    
+.nav_text {
+    text-decoration-line: none;
+    font-family: 'Akaya Kanadaka', cursive;
+    color:var(--white);
+    display: block;
+    padding: 12px;
+    font-size: 1.9em;
+    text-shadow: 1px 2px 2px #3d3d3d;
+    transition: transform 0.2s ease-out;  
+}
+
+
+.nav-list a:hover{
+    background-color:var(--hover);
+}
+body {
+    font-family: 'Permanent Marker', cursive;
+    
 }
 
 main {
+    padding-top:20px;
     display: flex;
-    /* height: 100vh; */
+    margin-bottom:10px;
+    
 }
 
 .shipView {
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items:flex-start;
 }
 
-nav {
+.shipList {
+   
+    padding-left: 30;
     width: 200px;
 }
 
-img, nav {
+img, .ships {
     position: relative;
     z-index: 1;
 }
-
-h1 {
+h1  {
+    margin-top:70px;
+    color: var(--white);
     text-align: center;
-    font-size: x-large;
-    font-weight: 700;
+    font-size: 200%;
+    font-family: 'Permanent Marker', cursive;
+    border:rgb(247, 243, 236);
+    border-style: dotted;
 }
-
 a {
     text-decoration: none;
     color: #fff;
@@ -36,4 +100,18 @@ a {
 
 li {
     list-style-type: none;
+}  
+
+footer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--gray);
+    height: 15%;
+    color: var(--black);
+    font-family: 'Gloria Hallelujah', cursive;
+}
+footer p {
+    padding-left: 4em;
+    padding-right: 4em;
 }

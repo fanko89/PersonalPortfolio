@@ -3,8 +3,8 @@ import { getLastNumber, removeChildren } from '../utils/index.js'
 
 console.log(starships.length)
 
-const nav = document.querySelector('nav')
-const navList = document.querySelector('.navList')
+const ships = document.querySelector('ships')
+const shipList = document.querySelector('.shipList')
 const shipView = document.querySelector('.shipView')
 
 const dialog = document.querySelector('.modal')
@@ -28,7 +28,7 @@ function populateNav(starships) {
         listItem.textContent = starship.name
 
         anchorWrap.appendChild(listItem)
-        navList.appendChild(anchorWrap)
+        shipList.appendChild(anchorWrap)
     })
 }
 
@@ -51,7 +51,7 @@ function addStarField(element, numStars) {
         let star = document.createElement('div')
         star.style.setProperty('position', 'absolute')
         star.style.setProperty('width', '2px')
-        star.style.setProperty('height', '2px')
+        star.style.setProperty('height', '1px')
         star.style.setProperty('background-color', 'white')
         let xy = getRandomPosition()
         star.style.left = `${xy[0]}px`

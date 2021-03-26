@@ -17,11 +17,50 @@
     
 }
 
+header{
+    display: flex;
+    justify-content:center;
+    margin-top:15px;
+}
 html{
     box-sizing:border-box;
     scroll-behavior: smooth;
+    background-color:var(--black);
+}
+#navbar{
+    overflow:hidden;
+    display:flex;
+    justify-content: flex-end;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+    background-color:var(--gray);
+
+
 }
 
+.nav-list{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;  
+}
+    
+.nav_text {
+    text-decoration-line: none;
+    font-family: 'Akaya Kanadaka', cursive;
+    color:var(--white);
+    display: block;
+    padding: 12px;
+    font-size: 1.9em;
+    text-shadow: 1px 2px 2px #3d3d3d;
+    transition: transform 0.2s ease-out;  
+}
+
+
+.nav-list a:hover{
+    background-color:var(--hover);
+}
 
 body {
     
@@ -40,14 +79,13 @@ h1  {
 
 
 #main {
-    height: 70em;
-    padding-left: 100x;
+    padding-bottom: 30px;
     font-family: 'Akaya Kanadaka', cursive;
     font-family: 'Permanent Marker', cursive;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
-    align-items: center;
+    align-items:center;
 }
 
 figure > img {
@@ -73,21 +111,4 @@ figcaption {
     
 }
 
-body {
-    
-    font-family: 'Permanent Marker', cursive;
-    
-}
-footer{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    background-color: var(--gray);
-    height: 15%;
-    color: var(--black);
-    font-family: 'Gloria Hallelujah', cursive;
-}
-footer p {
-    padding-left: 4em;
-    padding-right: 4em;
-}
+
