@@ -1,9 +1,47 @@
+
 * {
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+    box-sizing:border-box;
+    
+}
+:root {
+    --white: rgb(247, 243, 236);
+    --brown: rgb(112, 84, 24);
+    --tan: rgb(172, 159, 131);
+    --light_tan: rgba(158, 139, 102, 0.267);
+    --hover:  rgba(218, 218, 218, 0.144);
+    --blue: rgb(140, 163, 157);
+    --black: rgb(17, 19, 20);
+    --gray: rgb(202, 202, 202);
+    
 }
 
+html{
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    
+    font-family: 'Permanent Marker', cursive;
+    
+}
+h1  {
+    margin-top:70px;
+    color: var(--white);
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Permanent Marker', cursive;
+    border:rgb(247, 243, 236);
+    border-style: dotted;
+}
+
+
 #main {
+    height: 70em;
+    padding-left: 100x;
     font-family: 'Akaya Kanadaka', cursive;
     font-family: 'Permanent Marker', cursive;
     display: flex;
@@ -13,5 +51,43 @@
 }
 
 figure > img {
+    display: flex;
+    flex-wrap: wrap;
     height: 200px;
+}
+figure {
+    margin: 1em;
+}
+
+figcaption {
+    position: relative;
+    text-align: center;
+     height: 20px;
+     font-size: 90%;
+     bottom:5.5px;
+     color:var(--black);
+     background-color:var(--black);
+    color: #fff;
+    text-decoration-line: underline;
+    
+    
+}
+
+body {
+    
+    font-family: 'Permanent Marker', cursive;
+    
+}
+footer{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--gray);
+    height: 15%;
+    color: var(--black);
+    font-family: 'Gloria Hallelujah', cursive;
+}
+footer p {
+    padding-left: 4em;
+    padding-right: 4em;
 }

@@ -56,7 +56,7 @@ html{
 .nav-list a:hover{
     background-color:var(--hover);
 }
-main {
+body {
     font-family: 'Permanent Marker', cursive;
     
 }
