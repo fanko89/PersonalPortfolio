@@ -70,12 +70,11 @@ h1  {
     border-style: dotted;
 }
 
-
-
-
 #filmList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  
 }
 
 figure {
