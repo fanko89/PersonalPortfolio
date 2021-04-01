@@ -1,8 +1,6 @@
 import { senators } from '../data/senators.js'
 import { representatives } from '../data/representatives.js'
 
-console.log(senators.length, representatives.length)
-
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
@@ -15,19 +13,17 @@ birthdayButton.addEventListener('click', () => {
     birthdaySort()
 })
 
-missedButton.addEventListener('click', () => {
-    birthdaySort()
-})
-
-function populateCongressGrid(congressPeople) {
-    congressPeople.forEach(person =>{
+function populateCongressGrid(simplePeople) {
+    console.log(simplePeople)
+    simplePeople.forEach(person => {
         let personDiv = document.createElement('div')
+        personDiv.className = 'figureDiv'
         let personFig = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
 
-        figCaption.txtContent = '${person.name}'
-        figImg.scr = person.imgURL
+        figImg.src = person.imgURL
+        figCaption.textContent = `${person.name}`
 
         personFig.appendChild(figImg)
         personFig.appendChild(figCaption)
@@ -37,11 +33,14 @@ function populateCongressGrid(congressPeople) {
 }
 
 function getSimplifiedCongress(congressPeople) {
-    return congressPeople.map(person =>{
-        let middleName = person.middleName ? '${person.middle_name}' : ''
-        return{
+    return congressPeople.map(person => {
+        let middleName = person.middle_name ? `${person.middle_name}` : ``
+        return {
             id: person.id,
-            name: '${person.first_name} ${middleName} ${person.last_name}'
+            name: `${person.first_name} ${middleName} ${person.last_name}`,
             imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-100px.jpeg`
         }
     })
+}
+
+populateCongressGrid(getSimplifiedCongress(senators))
