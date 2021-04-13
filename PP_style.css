@@ -172,7 +172,6 @@ a {
 
 .project-tile{
     display: flex;
-
     justify-content: center;
     align-items: center;
     margin: .4em;
