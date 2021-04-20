@@ -58,6 +58,7 @@ html{
 main{
     font-family: 'Permanent Marker', cursive;
     z-index: 1px;
+    font-weight: initial;
 
 }
 h1  {
