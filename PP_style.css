@@ -41,18 +41,7 @@ html{
       }
   }
 
-  @keyframes moveEvery {
-    from {
-      margin-left: 100%;
-      width: 300%;
-      animation-duration: 2s;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
+
 
 
 main{
