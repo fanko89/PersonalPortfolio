@@ -55,7 +55,7 @@ html{
 
 
 main{
-  font-family: 'Permanent Marker', cursive;
+  font-family: fantasy;
   z-index: 1px;
   font-weight: initial;
 
@@ -184,7 +184,7 @@ section#pokieHead{
 .pokeGrid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:space-evenly;
 }
 
 .scene {
@@ -194,7 +194,38 @@ section#pokieHead{
   perspective: 600px;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0);
   border-radius: 20px;
+  scroll-behavior:smooth;
+  animation-duration: 6s, 6s;
+  animation-name: moveCards,fadeCards;
+  animation-iteration-count: 1;
+  animation-direction:alternate;
   
+}
+
+@keyframes fadeCards{
+  from{
+      opacity:0
+         
+  }
+  to{
+      opacity: 1
+  }
+}
+
+@keyframes moveCards {
+from {
+  margin-right: 100%;
+  animation-fill-mode:inherit;
+ 
+  animation-duration: 3s;
+  animation-play-state: running;
+}
+
+to {
+  margin-right: 0%;
+  animation-delay: 2s;
+
+}
 }
 
 .card {
