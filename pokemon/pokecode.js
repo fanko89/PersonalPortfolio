@@ -1,16 +1,18 @@
 const pokeGrid = document.querySelector('.pokeGrid')
+const gen1 = document.querySelector('.gen1')
 const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('#fetchSelectedPokemon')
 const newButton = document.querySelector('#newPokemon')
 
 class Pokemon {
-    constructor(name, height, weight, abilities, moves) {
+    constructor(name, height, weight, abilities, moves, type) {
         this.id = 900
         this.name = name
         this.height = height
         this.weight = weight
         this.abilities = abilities
         this.moves = moves
+        this.types = type
     }
 }
 
@@ -74,6 +76,7 @@ function populatePokeCard(singlePokemon) {
     pokeCard.appendChild(populateCardBack(singlePokemon))
     pokeScene.appendChild(pokeCard)
     pokeGrid.appendChild(pokeScene)
+    gen1.appendChild(pokeScene)
 }
 
 function populateCardFront(pokemon) {
