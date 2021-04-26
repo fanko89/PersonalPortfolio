@@ -110,7 +110,7 @@ function populateCardFront(pokemon) {
   console.log(pokemon)
   let pokeFront = document.createElement('div')
   pokeFront.className = 'card__face card__face--front'
-  let frontLabel = document.createElement('p')
+  let frontLabel = document.createElement('pLable')
   frontLabel.textContent = pokemon.name
   let frontImage = document.createElement('img')
   frontImage.src = getImageFileName(pokemon)
@@ -131,17 +131,18 @@ function populateCardFront(pokemon) {
  
   
     pokemon.types.forEach((pokeType) => {
-      let frontType = document.createElement('p')
-      frontType.textContent =pokemon.types
+      let frontType = document.createElement('pType')
+      frontType.className = 'frontText'
+      frontType.textContent =pokeType.type.name
       pokeFront.appendChild(frontType)
     })
 
 
-  let pokeHeight = document.createElement('p')
+  let pokeHeight = document.createElement('pHeight')
   pokeHeight.textContent = `Height: ${pokemon.height / 10} kg`
   pokeFront.appendChild(pokeHeight)
 
-  let pokeWeight = document.createElement('p')
+  let pokeWeight = document.createElement('pWeight')
   pokeWeight.textContent = `Weight: ${pokemon.weight / 10} kg`
   pokeFront.appendChild(pokeWeight)
 
@@ -167,37 +168,25 @@ function populateCardBack(pokemon) {
   let pokeBack = document.createElement('div')
   pokeBack.className = 'card__face card__face--back'
   typesBackground(pokemon, pokeBack)
-  let backLabel = document.createElement('p')
+  let backLabel = document.createElement('pMoves')
   backLabel.textContent = `Moves: ${pokemon.moves.length}`
   pokeBack.appendChild(backLabel)
  
-  /*
-  let typeLabel = document.createElement('h3')
-  typeLabel.textContent = 'Types:'
-  pokeBack.appendChild(typeLabel)
-
-  pokemon.types.forEach((pokeType) => {
-    let backType = document.createElement('p')
-    backType.textContent = pokeType.type.name
-    pokeBack.appendChild(backType)
-  })
-  
- let pokeHeight = document.createElement('p')
-  pokeHeight.textContent = `Height: ${pokemon.height / 10} kg`
-  pokeFront.appendChild(pokeHeight)*/
 
 
-  let abilityLabel = document.createElement('h3')
+  let abilityLabel = document.createElement('headAbility')
   abilityLabel.textContent = 'Abilities:'
   pokeBack.appendChild(abilityLabel)
   pokemon.abilities.forEach((pokeAbility) => {
-    let ability = document.createElement('p')
+    let ability = document.createElement('pAbilities')
     ability.textContent = pokeAbility.ability.name
     pokeBack.appendChild(ability)
   })
-
+  let statLabel = document.createElement('headStats')
+  statLabel.textContent = 'Stats:'
+  pokeBack.appendChild(statLabel)
   pokemon.stats.forEach((stat) => {
-    let statPara = document.createElement('p')
+    let statPara = document.createElement('pStats')
     statPara.textContent = `${stat.stat.name} : ${stat.base_stat}`
     pokeBack.appendChild(statPara)
   })
