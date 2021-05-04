@@ -92,7 +92,8 @@ a {
     
     display: flex;
     justify-content: flex-end;
-    list-style: none;  
+    list-style: none;
+    color: var(--white) ;  
 }
     
 .nav_text {
