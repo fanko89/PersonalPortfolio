@@ -143,6 +143,14 @@ h1{
     font-size: 10px;
   }
 
+  .congressGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    
+    
+  }
+
   
   @keyframes fadeCards{
     from{
