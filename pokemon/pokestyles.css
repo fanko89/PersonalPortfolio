@@ -108,6 +108,13 @@ main{
 
 /*pokiemon part*/
 
+h1{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--blue);
+  text-align: center;
+  font-size: 60px;
+}
+
 h3{
   font-size: 10px;
 }

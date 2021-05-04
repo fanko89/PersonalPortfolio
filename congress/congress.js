@@ -4,29 +4,34 @@ import { removeChildren } from '../utils/index.js'
 
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
-const birthdayButton = document.querySelector('#birthdayButton')
-const missedVotesButton = document.querySelector('#missedVotes')
-const partyHackButton = document.querySelector('#partyHack')
+const republicansButton = document.querySelector('#republicans')
+const democratsButton = document.querySelector('#democrats')
+const independentsButton = document.querySelector('#independents')
 
-seniorityButton.addEventListener('click', () => {
-    senioritySort()
+
+
+seniorityButton.addEventListener('click', () => senioritySort())
+
+republicansButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(representatives, 'R'))
 })
 
-birthdayButton.addEventListener('click', () => {
-    birthdaySort()
+democratsButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(representatives, 'D'))
 })
 
-missedVotesButton.addEventListener('click', () => {
-    alert(`${missedVotesRep.name} missed votes ${missedVotesRep.missed_votes_pct}% of the time!`)
+independentsButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(senators, 'ID'))
 })
 
-partyHackButton.addEventListener('click', () => {
-    alert(`There are ${partyHackArray.length} representatives who vote with their party ${partyHack.votes_with_party_pct}% of the time!`)
-})
+const filterCongressPeople = (chamber, politicalParty) => {
+    return getSimplifiedPeople(chamber).filter(member => member.party === politicalParty)
+}
 
-function populateCongressGrid(simplePeople) {
+
+function populateCongressDiv(simplifiedList) {
     removeChildren(congressGrid)
-    simplePeople.forEach(person => {
+    simplifiedList.forEach(person => {
         let personDiv = document.createElement('div')
         personDiv.className = 'figureDiv'
         let personFig = document.createElement('figure')
@@ -34,7 +39,11 @@ function populateCongressGrid(simplePeople) {
         let figCaption = document.createElement('figcaption')
 
         figImg.src = person.imgURL
-        figCaption.textContent = `${person.name}`
+        figCaption.textContent = person.name
+
+        if (person.party === 'R') figCaption.style.background = '#BA3439';
+        if (person.party === 'D') figCaption.style.background = '#336ECC';
+        if (person.party === 'ID') figCaption.style.background = '#6B45A1';
 
         personFig.appendChild(figImg)
         personFig.appendChild(figCaption)
@@ -43,40 +52,21 @@ function populateCongressGrid(simplePeople) {
     })
 }
 
-function getSimplifiedCongress(congressPeople) {
-    return congressPeople.map(person => {
-        let middleName = person.middle_name ? `${person.middle_name}` : ``
+function getSimplifiedPeople(peopleList) {
+    return peopleList.map(person => {
+        let middleName = person.middle_name ? ` ${person.middle_name}` : ``
         return {
             id: person.id,
-            title: person.title,
-            name: `${person.first_name} ${middleName} ${person.last_name}`,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-100px.jpeg`,
+            name: `${person.first_name}${middleName} ${person.last_name}`,
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`,
             seniority: parseInt(person.seniority, 10),
-            date_of_birth: parseInt(person.date_of_birth, 10),
-            missed_votes_pct: person.missed_votes_pct,
-            votes_with_party_pct: person.votes_with_party_pct
+            party: person.party,
         }
     })
 }
 
 function senioritySort() {
-     populateCongressGrid(getSimplifiedCongress(senators).sort(
-        (a, b) => a.seniority - b.seniority
-    ).reverse())
+    populateCongressDiv(getSimplifiedPeople(senators).sort((a, b) => a.seniority - b.seniority).reverse())
 }
 
-function birthdaySort() {
-    populateCongressGrid(getSimplifiedCongress(senators).sort(
-        (a, b) => a.date_of_birth - b.date_of_birth
-    ))
-}
-
-const missedVotesRep = getSimplifiedCongress(representatives).filter((rep) => rep.title === 'Representative').reduce((acc, rep) => acc.missed_votes_pct > rep.missed_votes_pct ? acc : rep)
-
-const partyHack = getSimplifiedCongress(representatives).filter((rep) => rep.title === 'Representative').reduce((acc, rep) => acc.votes_with_party_pct > rep.votes_with_party_pct ? acc : rep)
-
-const partyHackArray = getSimplifiedCongress(representatives).filter((person) => {
-    return person.votes_with_party_pct === partyHack.votes_with_party_pct
-})
-
-populateCongressGrid(getSimplifiedCongress(senators))
+populateCongressDiv(getSimplifiedPeople(senators))
