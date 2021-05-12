@@ -1,0 +1,512 @@
+:root {
+    --lightBlue:rgb(73, 167, 211);
+    --gray:rgb(150, 150, 150);
+    --lightGray:rgb(231, 231, 231);
+    --lightred:rgb(228, 111, 76);
+    --red:rgb(204, 3, 3);
+    --sand:rgb(223, 148, 113);
+    --white: rgb(247, 243, 236);
+}
+
+*{  -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+/*BODY*/
+body{
+    background-color: var(--white);
+    color: black;
+    background-image: url(img/background.gif);
+   
+    
+}
+
+
+#body_wrapper{
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin:0 auto;
+    background-color: var(--white);
+}
+
+
+
+@keyframes fadin{
+    from{
+            opacity:0
+        }
+    to{
+            opacity: 1
+        }
+    }
+    
+#logo{
+    margin:20px 0 0 20px;
+    font-family: 'Kalam', cursive;
+    color:var(--white);
+    animation-duration: 4s;
+    animation-name: fadin;
+}
+header{
+    text-align: center;
+    background-image: url(img/background2.png);
+}
+
+/*NAVIGATION phone*/
+@media only screen and (max-width: 800px) {
+    #navBar{
+        background: rgb(194,194,194);
+background: linear-gradient(90deg, rgba(194,194,194,1) 16%, rgba(149,149,149,1) 53%, rgba(209,209,209,1) 87%);
+    
+        font-family: 'Secular One', sans-serif;
+        padding:25px 2%;  
+    }
+    #navBar ul{
+        list-style-type: none;
+        padding: 0;
+        
+    }
+    #navBar ul li{
+        padding:0 0 10px 0;
+    }
+
+
+    
+    #navBar ul li a{
+        display: block;
+        border: solid 1px var(--lightGray);
+        padding: 2%;
+        text-decoration: none;
+        background-color: var(--lightBlue);
+        border-radius: 10px;
+        color:var(--white);
+        font-weight: 600;
+        text-shadow: 1px 1px 2px #3d3d3d;
+        transition: transform 0.2s ease-out;
+    }
+    
+    #navBar ul a:hover{
+        background-color:var(--lightGray); 
+    }
+    
+    #navBar ul a#page{
+        background-color:var(--red) ;
+    }
+    
+    
+  }
+
+  /*NAVIGATION desktop*/
+
+  @media only screen and (min-width: 801px) {
+    #navBar{
+        overflow:hidden;
+        width:100%;
+        background: rgb(194,194,194);
+background: linear-gradient(90deg, rgba(194,194,194,1) 16%, rgba(149,149,149,1) 53%, rgba(209,209,209,1) 87%);
+    
+        font-family: 'Secular One', sans-serif;
+        height:40px;   
+    }
+    #navBar ul{
+        list-style-type: none;
+    }
+    #navBar ul li {
+        box-sizing: border-box;
+        list-style:none;
+      
+    
+    }
+    
+    #navBar ul li a{
+        float: left;
+        padding:0 20px 0 20px;
+        text-decoration: none;
+        font-size: 32px;
+        color:var(--white);
+        font-weight: 600;
+        text-shadow: 1px 1px 2px #3d3d3d;
+        transition: transform 0.2s ease-out;
+    }
+    
+    #navBar ul a:hover{
+        background-color:var(--lightGray); 
+    }
+    
+    #navBar ul a#page{
+        background-color:var(--red) ;
+    }
+    
+    
+  }
+
+/*SECTIONS*/
+#main{
+    margin: 20px 20px 70px 20px;  
+}
+
+
+
+figure.logo_pic{
+    float:right;
+    margin:0 0 0 2%;
+    padding: 0;
+    border:1px solid #999;
+    width:40%;
+}
+
+figure.logo_pic img{
+    width:100%;
+}
+
+figure.logo_pic2{
+    float:right;
+    margin:-40px 0 0 2%;
+    padding: 0;
+    width:40%;
+}
+
+figure.logo_pic2 img{
+    width:100%;
+}
+
+figure.logo_pic figcaption{
+    text-align: center;
+    color:white;
+    background-color: black;
+}
+
+
+
+figure.OWV_Img{
+    float:left;
+    margin:3%;
+    border:10px solid rgba(102, 102, 102, 0.11);
+}
+figure.OWV_Img figcaption{
+    text-align: center;
+    color:white;
+    font-size: 18px;
+    padding-bottom:8px;
+    margin-top: -5px;
+    background-color:var(--red);
+}
+
+.content{
+    color:var(--lightred);   
+}
+
+h2.content{
+    border-bottom: 5px solid var(--red);
+    font-family: 'Train One', cursive;
+    margin-bottom: 20px;
+    width:fit-content;
+}
+
+div#photo_head{
+    margin: 60px 25px 5px 25px;
+}
+div#photo_head p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+h2.photo_h2{
+    text-align: center;
+    font-family: 'Train One', cursive;
+    display:grid;
+    color:var(--red);
+    border-bottom: 5px solid var(--red);
+    font-size: 30px;
+}
+
+a.link{
+    text-decoration: none;
+    color:var(--red);
+}
+section.iframe{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+section.part dt strong{
+    color:var(--sand);
+    font-size: 1.5rem;
+}
+
+section.part dd{
+    margin: 0 0 20px 20px;
+    font-size: 1.2rem;
+}
+
+section.part ol li{
+    background-image: url(img/onewheel_icon.png) ;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    padding:0px 10px 5px 70px;
+    
+ 
+}
+
+section.part ol{
+    
+    font-size: 1.2rem;
+    color: var(--lightBlue);
+    font-weight: bold;
+}
+
+
+section.part ul{
+    font-size: 1.2rem;
+    color: var(--lightBlue);
+    font-weight: bold;
+}
+section.part ul li{
+    background-image: url(img/onewheel_v_icon.png) ;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    padding:5px 0px 10px 50px;
+    
+ 
+}
+section.iframe2 .frames{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 20px;
+    height:30em;
+    border: none;
+                
+}
+section.iframe .frames{
+    width: 90%;
+    margin-left: 5%;
+    height:30em;
+    border: none;
+                
+}
+section.iframe .mapFrames{
+    float:right;
+    margin:0 0 0 2%;
+    width: 70%;
+    height:30em;
+    border: none;
+                
+}
+
+section.part p, blockquote{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+section.thank_part{
+    margin-bottom:20%;
+}
+section.thank_part h2{
+    font-size: 50px;
+}
+
+section.thank_part p{
+    font-size: 30px;
+}
+
+section.newsFeed{
+    margin-bottom: 30px;
+}
+
+section.newsFeed{
+    margin-bottom: 60px;
+}
+section.newsFeed p, blockquote{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+section.partNews{
+    margin-bottom: 30px;
+}
+section.partNews .shopContent{
+    border-bottom: 5px solid var(--sand);
+    font-family: 'Train One', cursive;
+    margin-bottom: 20px;
+    color: var(--sand);
+    text-align: center;
+
+}
+section.shopText .headShop{
+    border-bottom: 5px solid var(--sand);
+    font-family: 'Train One', cursive;
+    margin-bottom: 20px;
+    color: var(--sand);
+    text-align: center;
+    
+}
+section.shopText{
+    margin-bottom: 80px;
+}
+section.shopText p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    
+ 
+}
+section.shopText ul{
+        font-size: 1.2rem;
+        color: var(--lightBlue);
+        font-weight: bold;
+        margin: 10px 20px; 
+}
+section.shopText ul li{
+    margin-bottom: 15px; 
+}
+
+
+section.gallery{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin: 40px 20px;  
+}
+section.shopText .headShop2{
+    border-bottom: 5px solid var(--sand);
+    font-family: 'Train One', cursive;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: var(--sand);
+    width:fit-content;
+    
+}
+
+table.sub{
+    border:1px solid red;
+    box-shadow: 1px 3px 10px #456;
+    border-collapse:collapse;
+    width:100%;
+}
+
+table.sub th{
+    background-color:rgb(150, 150, 150);
+    padding: .5rem;
+    font-size:25px;
+}
+
+table.sub td{
+    padding: .5rem;
+    border-bottom: solid #567 1px;
+    font-size:20px;
+    text-align: center;
+}
+
+table.sub tr:hover{
+    background-color:var(--sand);
+    color:var(--red);
+}
+table.sub tr:nth-child(even){
+    background-color:rgb(226, 226, 226);
+}
+
+
+
+/*FORM*/
+.form_questions{
+       
+    margin: 3rem 3rem 3rem 3rem;
+}
+
+/*feild box for form*/
+.form_questions fieldset{
+    margin-bottom: 3rem;
+    -moz-border-radius:10px;  
+    border-radius: 10px;  
+    -webkit-border-radius: 10px;
+    /*box-shadow: 0 0 10px #666;*/
+}
+
+/* name of feild box for form*/
+fieldset legend{
+    font-size: 20px;
+   margin-left: 50px;
+}
+
+/* form names*/
+.form_questions fieldset label{
+    font-size: 18px; 
+    margin: 20px;
+}
+
+.form_questions input, select{
+    font-size: 18px;
+    margin-bottom: 10px;
+    -moz-border-radius:5px;  
+    border-radius: 5px;  
+    -webkit-border-radius: 5px;
+}
+
+.form_questions input.info, input.date, textarea.more_info{
+    color: var(--red);
+    background-color: var(--lightGray);
+
+}
+
+/* form input text placeholder color*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--red);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--red);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--red);
+  }
+  
+
+.form_questions textarea{
+    font-size: 18px;
+    padding-right: 7.9em; 
+    margin-bottom: 10px;
+    -moz-border-radius:5px;  
+    border-radius: 5px;  
+    -webkit-border-radius: 5px;
+    margin-left: 20px; 
+}
+.form_questions .date{
+    font-size: 18px;
+    margin-left: 20px;
+    padding-right: 10em; 
+    margin-bottom: 10px;
+    -moz-border-radius:5px;  
+    border-radius: 5px;  
+    -webkit-border-radius: 5px; 
+}
+
+
+.form_questions fieldset, input{
+    margin-left: 20px;
+}
+
+#submission{
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    padding:10px 40px 10px 40px;
+    background-color: var(--red);
+    -moz-border-radius:10px;  
+    border-radius: 10px;  
+    -webkit-border-radius: 10px; 
+}
+
+/*FOOTER*/
+footer {
+    text-align: center;
+    font-family: 'Kalam', cursive;
+    background-color:var(--lightBlue);  
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>FORM: One Wheelin Villain Team</title>
+    
+
+</head>
+    <!--Beginning Header-->
+    <body>
+    <div id="body_wrapper">
+<header>
+    <div id="logo">
+        <h1>One Wheelin Villains</h1>
+        <h2 id="slogan">Live every day like it's your last! Get out and Onewheel!</h2>
+
+    </div>
+
+<!--Beginning Navigation bar-->
+<nav id="navBar">
+        <ul calss ="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a id="page" href="form.html">form</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="shop.html">shop</a></li>
+        </ul>
+</nav>
+</header>
+
+
+<!--Beginning Main -->
+    <section id="form">
+        <div id="main">
+            <h2 class="photo_h2">Sign Up Form</h2>
+        
+            <!--ome wheel form-->
+        <form action="thanks.html" method="post" enctype="multipart/form-data" name="userInfo" class="form_questions">
+            <fieldset>
+            <legend><strong>Enter Personal Info Below:</strong></legend><br>
+            <label>
+                <span>Date:</span><br>
+            <input class="date" type="date"><br>
+        </label>
+        <label>
+            <span>Name:</span><br>
+            <input class="info" type="text"  name="fname" placeholder="full name" size="41" required><br>
+        </label> 
+    <label> 
+            <span>Phone Number:</span><br>
+            <input class="info" type="tel" name="phone" placeholder="###-###-####" size="41" required><br>
+        </label> 
+    <label> 
+            <span>Email</span><br>
+            <input class="info" type="email" name="email" placeholder="youremail@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="41" required><br><br>
+        </label>
+        <label> 
+            <span>Other Information:</span><br>
+            <textarea class="more_info" name="more_info" rows="5"  placeholder="write here"></textarea><br><br>
+        </label>  
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Select Your Gender:</strong></legend><br>
+            <label>
+            <input type="radio" id="male" name="gender" value="male">
+            <span>Male</span><br>
+        </label>
+    <label>
+            <input type="radio" id="female" name="gender" value="female">
+            <span>Female</span><br>
+        </label>
+    <label>
+            <input type="radio" id="other" name="gender" value="other">
+            <span>Other</span><br><br>
+        </label>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Do You Own An OneWheel?</strong></legend><br>
+            <label>
+            <input type="checkbox" id="join" name="join" value="join">
+            <span>I want to join the club.</span><br>
+        </label>
+    <label>
+            <input type="checkbox" id="sell" name="sell" value="sell">
+            <span>I want to sell products.</span><br>
+        </label>
+    <label>
+            <input type="checkbox" id="sponsored" name="sponsored" value="sponsored">
+            <span> I want to get sponsored.</span><br><br>
+        </label>
+        </fieldset>   
+        <fieldset>
+            <legend><strong>Pick Your Experience Level:</strong></legend><br>
+            <label>
+            <select name="choice">
+                <option value="first">Newbie</option>
+                <option value="second">Some Experience</option>
+                <option value="third">Expert</option>
+            </select><br><br>
+        </label>
+            
+        </fieldset>
+        <input id="submission" type="submit" value="sign up">
+        <input type="hidden" name="subject" value="sign up reistation">
+        <input type="hidden" name="redirect" value="thanks.html">
+
+        </form> 
+    </div>
+</section>
+
+    <!--Beginning Footer -->
+    <footer>
+        <p>&copy; 2021 &bull; OneWheelinVillains &bull; Built by Derek Ney &bull; All Rights Reserved</p>
+    </footer>
+    </div>
+</body>
+
+</html>
+    
+
