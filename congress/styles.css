@@ -1,9 +1,116 @@
 * {
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing: border-box
 }
 
-.congressGrid {
+
+
+:root {
+  --white: rgb(247, 243, 236);
+  --brown: rgb(112, 84, 24);
+  --tan: rgb(100, 84, 50);
+  --light_tan: rgba(158, 139, 102, 0.267);
+  --hover:  rgba(218, 218, 218, 0.144);
+  --blue: rgb(140, 163, 157);
+  --black: rgb(17, 19, 20);
+  --gray: rgb(179, 179, 179);
+    
+  }
+  
+  body{
+    background-color: var(--light_tan);
+  }
+  
+  html{
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+    animation-duration: 3s, 4.8s;
+    animation-name: moveEvery,fadin;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    
+  }
+  @keyframes fadin{
+      from{
+          opacity:0
+             
+      }
+      to{
+          opacity: 1
+      }
+  }
+  
+  @keyframes moveEvery {
+    from {
+      margin-left: 100%;
+      width: 300%;
+      animation-duration: 2s;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
+  
+  main{
+    font-family: fantasy;
+    z-index: 1px;
+    font-weight: initial;
+  
+  }
+  
+  /*navigation*/
+  #navbar{
+      
+    overflow:hidden;
+    display:flex;
+    justify-content: flex-end;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+    background-color:var(--tan);
+  
+  
+  }
+  
+  .nav-list{
+    
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;  
+  }
+    
+  .nav_text {
+    font-family: 'Akaya Kanadaka', cursive;
+    color:var(--white);
+    display: block;
+    padding: 12px;
+    font-size: 1.9em;
+    text-shadow: 1px 1px 2px #3d3d3d;
+    transition: transform 0.2s ease-out;  
+  }
+  
+  
+  .nav-list a:hover{
+    background-color:var(--hover);
+  }
+  
+  .intro_text{
+    color:var(--white);
+    font-size: 175%;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  
+  
+  /*CONGRESS part*/
+  .congressGrid {
     display: flex;
     flex-wrap: wrap;
 }
@@ -11,8 +118,11 @@
 .figureDiv {
     padding: 6px;
     margin: 6px;
-    border: 1px red solid;
-    box-shadow: 3px 3px 3px black;
+    border:2px var(--light_tan);
+    box-shadow: 1px 2px 3px black;
+    border-radius: 15px;
+    color:var(--white);
+    background-color: var(--blue);
 }
 
 figure {
@@ -22,3 +132,54 @@ figure {
 figcaption {
     text-align: center;
 }
+
+  h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--blue);
+    text-align: center;
+    padding-top: 80px;
+    font-size: 60px;
+}
+ #buttonHeader{
+     text-align: center;
+     padding-top: 70px;
+ } 
+  h3{
+    font-size: 10px;
+  }
+
+  .congressGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    background-color: var(--tan);
+    
+    
+  }
+  
+  @keyframes fadeCards{
+    from{
+        opacity:0
+           
+    }
+    to{
+        opacity: 1
+    }
+  }
+  
+  @keyframes moveCards {
+  from {
+    margin-right: 10%;
+    animation-fill-mode:inherit;
+   
+    animation-duration: 3s;
+    animation-play-state: running;
+  }
+  
+  to {
+    margin-right: 0%;
+    animation-delay: 2s;
+  
+  }
+  }
+  

@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
     <link href="styles.css" rel="stylesheet" />
-    <title>People of Congress</title>
-  </head>
-  <body>
+    
+     <!--file import-->
+     <link rel="preconnect" href="https://fonts.gstatic.com"/>
+     <link rel="preconnect" href="https://fonts.gstatic.com"/>
+ <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Asap+Condensed&family=Concert+One&family=Gloria+Hallelujah&family=Permanent+Marker&display=swap" rel="stylesheet"/>    
+ <link
+   rel="stylesheet"
+   href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+   integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+   crossorigin="anonymous"
+ />
+    <title>Congress</title>
+</head>
+<!--navbar-->
+<body>
+<nav id="navbar">
+    <ul class="nav-list">
+      <li>
+        <a  class="nav_text" href="../index.html">HOME</a>
+    </li>
+        <li>
+            <a  class="nav_text" href="../index.html#about">ABOUT</a>
+        </li>
+        <li>
+            <a class="nav_text" href="../index.html#projects">PROJECTS</a>
+        </li>
+        <li>
+            <a  class="nav_text" href="../index.html#contact">CONTACT</a>
+        </li>
+        
+    </ul>
+    </nav>
+    <body>
     <header>
+      
+      <div class="container">
       <h1>People of Congress</h1>
       <div id="buttonHeader">
-        <button id="seniorityButton">Sort by Seniority</button>
-        <button id="birthdayButton">Sort by Birthday</button>
+      
+        <button id="seniorityButton" class = "btn-lg">Sort by Seniority</button>
+        <button id="birthdayButton"class = "btn-lg">Sort by Birthday</button>
+        <button id="missedVotes"class = "btn-lg">Highest Missed Vote %</button>
+        <button id="partyHack" class = "btn-lg">Highest Votes with Party %</button>
+      </div>
       </div>
     </header>
     <main>

@@ -1,0 +1,9 @@
+﻿# Rule 1
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+# Rule 2
+User-agent: *
+Allow: /
+
+Sitemap: http://www.atyourservicepros.us/sitemap.xml
