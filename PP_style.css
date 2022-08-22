@@ -79,6 +79,11 @@ a {
     display: block;
     
 }
+p.text{
+    font-size: 280%;
+    font-family: 'Akaya Kanadaka', cursive;
+
+}
 
 #navbar{
     
@@ -142,6 +147,7 @@ a {
     align-items: center;
     background-color:var(--light_tan);
     height: 65em;
+    width: auto;
     
     
     
@@ -154,14 +160,21 @@ a {
 
 
 }
+#projects p{
+    font-size: 40px;
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+
+}
 .grid {
     grid-template-columns: 1fr;
   }
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    grid-gap: 1rem;
-    width: 100%;
+    grid-gap: 4rem;
+    width: 50%;
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 6rem;
@@ -191,6 +204,7 @@ figcaption{
    text-align: center;
     height: 50px;
     font-size: 170%;
+    width:360px;
     bottom: 22px;
     color:var(--black);
     background-color:var(--gray);
@@ -204,6 +218,7 @@ figcaption > span {
   }
   figcaption:hover > span {
       display:contents;
+     
       font-size: 100% ;
       transform: translateY(4px);
   } 
