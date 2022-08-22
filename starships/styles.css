@@ -42,13 +42,13 @@ html{
 }
     
 .nav_text {
-    text-decoration-line: none;
-    font-family: 'Akaya Kanadaka', cursive;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: none;
     color:var(--white);
     display: block;
     padding: 12px;
     font-size: 1.9em;
-    text-shadow: 1px 2px 2px #3d3d3d;
+    text-shadow: 1px 1px 2px #3d3d3d;
     transition: transform 0.2s ease-out;  
 }
 

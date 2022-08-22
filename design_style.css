@@ -85,7 +85,8 @@ p.text{
 }
     
 .nav_text {
-    font-family: 'Akaya Kanadaka', cursive;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: none;
     color:var(--white);
     display: block;
     padding: 12px;
