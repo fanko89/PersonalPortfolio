@@ -1,87 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
   <loc>https://www.atyourservicepros.us/</loc>
-  <lastmod>2019-07-18T00:15:35+00:00</lastmod>
-  <priority>1.00</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/HVAC_services.html</loc>
-  <lastmod>2019-07-18T00:00:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/electrical_services.html</loc>
-  <lastmod>2019-07-18T00:00:52+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/plumbing_services.html</loc>
-  <lastmod>2019-07-18T00:01:30+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/service_partner_plan.html</loc>
-  <lastmod>2019-07-18T00:02:18+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/index.html</loc>
-  <lastmod>2019-07-18T00:15:35+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/contact.html</loc>
-  <lastmod>2019-07-18T00:06:10+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/career.html</loc>
-  <lastmod>2019-07-18T00:04:46+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/appointment.html</loc>
-  <lastmod>2019-07-18T00:02:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/financing.html</loc>
-  <lastmod>2019-07-18T00:02:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/coupon1.html</loc>
-  <lastmod>2019-03-20T19:31:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/coupon2.html</loc>
-  <lastmod>2019-03-20T19:31:52+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/coupon3.html</loc>
-  <lastmod>2019-03-20T19:31:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/contact-form/form.html</loc>
-  <lastmod>2019-02-18T21:12:04+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
 <url>
   <loc>https://www.atyourservicepros.us/hire-form/form.html</loc>
-  <lastmod>2019-02-18T21:13:22+00:00</lastmod>
-  <priority>0.64</priority>
+  <lastmod>2023-09-05T00:00:00+00:00</lastmod>
 </url>
-
-
 </urlset>
