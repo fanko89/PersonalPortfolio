@@ -34,16 +34,19 @@ let myBool = true
 let myArray = [] // this is an empty array
 //              0     1      2        3      4
 let myArray2 = [42, 'Bob', myBool, ANSWER, true]
+let myArray3 = [7, 'jay', false, 13, 'blue']
 
 let secondElement = myArray2[1]
 
 myArray2.push('Thor') // added an element to the end of myArray2
 
-myArray2.unshift('Hello World!')
+myArray2.unshift('Hello World!') // added an element to the beginning of myArray2
+
+let combinedArray = myArray2.concat(myArray3); // combined both arrays to an new array
 
 let mylongString = '32408usfjalieriweur938u425ksdjfowiur84uwrlwshdjfo8wuroiwejr4e' // just an array of characters
 
-mylongString.length
+mylongString.length //find the length of the string
 
 // Object
 
