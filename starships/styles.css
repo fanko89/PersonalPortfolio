@@ -1,50 +1,49 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    
-}
 :root {
-    margin: 0;
-    box-sizing: border-box;
-    --white: rgb(247, 243, 236);
+    --white: rgb(255, 255, 255);
     --brown: rgb(112, 84, 24);
-    --tan: rgb(172, 159, 131);
+    --tan: rgb(100, 84, 50);
     --light_tan: rgba(158, 139, 102, 0.267);
     --hover:  rgba(218, 218, 218, 0.144);
     --blue: rgb(140, 163, 157);
     --black: rgb(17, 19, 20);
-    --gray: rgb(202, 202, 202);
+    --gray: rgb(179, 179, 179);   
 }
-html{
-    box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
     scroll-behavior: smooth;
-    background-color:var(--black);
-}
-#navbar{
-    overflow:hidden;
-    display:flex;
-    justify-content: flex-end;
-    position: fixed;
-    top:0;
-    width: 100%;
-    z-index: 10;
-    background-color:var(--gray);
-
-
+    background-color: var(--black);
 }
 
-.nav-list{
+/* Navigation */
+#navbar {
+    overflow: hidden;
     display: flex;
     justify-content: flex-end;
-    list-style: none;  
-    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--tan);
 }
-    
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    color: var(--white);
+}
+
 .nav_text {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Permanent Marker', cursive;
     text-decoration: none;
-    color:var(--white);
+    color: var(--white);
     display: block;
     padding: 12px;
     font-size: 1.9em;
@@ -52,74 +51,196 @@ html{
     transition: transform 0.2s ease-out;  
 }
 
-
-.nav-list a:hover{
-    background-color:var(--hover);
+.nav-list a:hover {
+    background-color: var(--hover);
 }
+
+/* Layout */
+@media (max-width: 968px) {
+    html { 
+        font-size: 80%;
+    }
+
+    .shipList {
+        font-size: 20px;
+    }
+    body p {
+      
+        margin-top: 3%;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 60%;
+    }
+    
+    .shipList {
+        font-size: 10px;
+    }
+
+    body p {
+       
+     
+        margin-top: 10%;
+    }
+    
+}
+
 body {
-    font-family: 'Permanent Marker', cursive;
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
-    padding-top:20px;
-    display: flex;
-    margin-bottom:10px;
-    
-}
-
-.shipView {
-
-    display: flex;
-    align-items:flex-start;
-}
-
-.shipList {
-   
-    padding-left: 30;
-    width: 200px;
-}
-
-img, .ships {
-    position: relative;
-    z-index: 1;
-}
-h1  {
-    margin-top:70px;
-    color: var(--white);
-    text-align: center;
-    font-size: 200%;
-    font-family: 'Permanent Marker', cursive;
-    border:rgb(247, 243, 236);
-    border-style: dotted;
-}
 a {
     text-decoration: none;
     color: #fff;
 }
 
-body p{
+body p {
     color: #fff;
-    font-family: 'Rubik', sans-serif;
     font-size: 24px;
-    padding: 5% 10%  3% 10%;
-    
+    padding: 6% 5% 4% 5%;
 }
 
 li {
     list-style-type: none;
 }  
 
-footer{
+h1 {
+    color: var(--black);
+    font-size: 400%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 210%;
+    color: #000;
+    text-align: center;
+}
+
+h3 {
+    font-size: 280%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+/* Content */
+.shipList {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left; 
+    font-size: 30px;
+    width: 200px;
+    padding-right: 20px; 
+    padding-bottom: 3rem;
+}
+
+img, .ships {
+    position: relative;
+    z-index: 1;
+    float: inherit;
+}
+
+.shipView {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 3; 
+}
+
+/* Modal */
+.ship-container {
+    position: relative; 
+    display: inline-block; 
+}
+
+.modal.is-active {
+    display: flex !important;
+}
+
+.modal {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 4; 
+}
+
+.close-button {
+    position: absolute;
+    top: -20px;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.close-button:hover {
+    color: var(--gray);
+}
+
+/* Footer */
+footer {
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+#contact {
     display: flex;
-    justify-content:space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--gray);
-    height: 15%;
-    color: var(--black);
-    font-family: 'Gloria Hallelujah', cursive;
+    background-image: linear-gradient(180deg, rgba(72, 78, 40, 0.349), rgb(96, 154, 161));
+    height: 60vh;
 }
-footer p {
-    padding-left: 4em;
-    padding-right: 4em;
+
+#contact_info {
+    color: var(--black);
+    font-size: 110%;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex; 
+}
+
+.contact-links a {
+    padding-top: 35px;
+    font-size: 1.4em;
+    margin: 1em;
+    color: var(--white);
+    flex-direction: row;
+    text-shadow: 1.5px 2px 2px #1f1f1f;
+    transition: transform 0.2s ease-out;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .shipList {
+        float: none;
+        width: auto;
+        padding-right: 0; 
+        padding-bottom: 1rem; 
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shipView {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: 400px; 
+        padding: 1rem; 
+    }
 }

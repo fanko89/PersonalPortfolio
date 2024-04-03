@@ -28,31 +28,11 @@ html{
   main{
     font-family: Arial, Helvetica, sans-serif;
     z-index: 1px;
+    padding-top: 4rem;
     font-weight: initial;
 
 }
-h1  {
-    color: var(--black);
-    font-size: 400%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-h2 {
-    font-size: 210%;
-    text-align: center;
-    
-}
-h3 {
-    font-size: 280%;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-}
 
-
-a {
-    text-decoration: none;
-    display: block;
-    
-}
 
 
 
@@ -80,7 +60,7 @@ a {
 }
     
 .nav_text {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Permanent Marker', cursive;
     text-decoration: none;
     color:var(--white);
     display: block;
@@ -93,31 +73,91 @@ a {
 .nav-list a:hover{
     background-color:var(--hover);
 }
-.welcome_text {
-    color:var(--black);
+
+/*layout*/
+
+
+@media(max-width: 100px){
+    html{ 
+        font-size:100%;
+    }
+    .studio{
+        width:360px;
+        height: 240px;
+    }
+}
+@media(max-width: 1000px){
+    html{
+        font-size: 80% !important;
+    }
+    .studio{
+        width:220px;
+        height: 160px;
+    }
+}
+    
+@media(max-width: 500px){
+    html{
+        font-size:60% !important;
+     
+    }
+    .studio{
+        width:110px;
+        height:75px;
+    }
+}
+
+main{
+    font-family: 'Permanent Marker', cursive;
+    z-index: 1px;
+
+}
+
+h1  {
+    color: var(--black);
     font-size: 400%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-size: 210%;
     text-align: center;
+    
+}
+h3 {
+    font-size: 280%;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.intro_text{
-    color:var(--white);
-    font-size: 175%;
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
-#welcome-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--gray);
-    background-image: linear-gradient(180deg, rgb(96, 154, 161), rgba(72, 78, 40, 0.349));
-    color:var(--blue);
-    width: 100%;
-    height: 100vh;
+
+
+a {
+    text-decoration: none;
+    display: block;
+    
 }
+
+
+p.text{
+    font-size: 280%;
+    font-family: 'Akaya Kanadaka', cursive;
+
+}
+
+li > a{
+    font-size: x-large;
+    padding: .4em .5em;
+}
+
+li > a{
+    font-size: x-large;
+    padding: .4em .5em;
+}
+
+
+
+/*Content*/
+
 .resume{
     padding-top: 3rem;
     display:flex;
@@ -135,106 +175,7 @@ a {
   }
   
 
-#projects{
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: center;
-    background-color:var(--light_tan);
-    height: auto;
-    width: auto;
-    
-    
-    
-}
-#projects h3 {
-    text-align: center;
-    width:100%;
-    border-bottom: 3px solid var(--gray) ;
-    text-shadow: 10px;
-    font-family:Arial, Helvetica, sans-serif;
 
-
-}
-#projects p{
-    font-size: 24px;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align:left;
-
-
-}
-
-
-main{
-    font-family: 'Permanent Marker', cursive;
-    z-index: 1px;
-
-}
-h1  {
-    color: var(--black);
-    font-size: 400%;
-    font-family: 'Permanent Marker', cursive;
-}
-h2 {
-    font-size: 210%;
-    text-align: center;
-}
-h3 {
-    font-size: 280%;
-    font-family: 'Akaya Kanadaka', cursive;
-    text-align: center;
-}
-
-
-a {
-    text-decoration: none;
-    display: block;
-    
-}
-p.text{
-    font-size: 280%;
-    font-family: 'Akaya Kanadaka', cursive;
-
-}
-
-#navbar{
-    
-    overflow:hidden;
-    display:flex;
-    justify-content: flex-end;
-    position: fixed;
-    top:0;
-    width: 100%;
-    z-index: 10;
-    background-color:var(--tan);
-
-
-}
-
-.nav-list{
-    
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;  
-}
-    
-.nav_text {
-    font-family:'Times New Roman', Times, serif;
-    text-decoration: none;
-    color:var(--white);
-    display: block;
-    padding: 12px;
-    font-size: 1.9em;
-    text-shadow: 1px 1px 2px #3d3d3d;
-    transition: transform 0.2s ease-out;  
-}
-
-
-.nav-list a:hover{
-    background-color:var(--hover);
-}
 
 
 #projects{
@@ -290,24 +231,6 @@ p.text{
     margin: 0 auto;
     margin-bottom: 6rem;
   }
-  
-
-.project-tile{
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-    margin: .4em;
-    
-
-}
-.project-tile:hover {
-    color:var(--hover);
-     transform: translateY(5px);
-     
-      
-}
-
 
 
 figcaption{
@@ -334,78 +257,9 @@ figcaption > span {
       transform: translateY(4px);
   } 
 
-li > a{
-    font-size: x-large;
-    padding: .4em .5em;
-}
 
 
-
-
-
-
-.studio{
-    position:static;
-    width:360px;
-    height: 240px;
-    border-radius: 10px;
-}
-
-#contact{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--gray);
-    background-image: linear-gradient(180deg,  rgba(72, 78, 40, 0.349), rgb(96, 154, 161));
-    height: 60vh;
-}
-#contact_info{
-    color: var(--black);
-    font-size: 110%;
-    text-align: center;
-    
-}
-
-.contact-links {
-    display: flex; 
-    justify-content: space-between;
-    
-}
-.contact-links a {
-    display: block;
-    padding-top: 35px;
-    font-size: 1.4em;
-    margin:1em;
-    color: var(--white);
-    text-shadow: 1.5px 2px 2px #1f1f1f;
-    transition: transform 0.2s ease-out;
-    
-}
-
-
-li > a{
-    font-size: x-large;
-    padding: .4em .5em;
-}
-
-
-
-
-.self{
-    position:relative;
-    width:360px;
-    height: 340px;
-}
-
-.studio{
-    position:static;
-    width:100%;
-    height: 240px;
-    border-radius: 10px;
-    
-}
+/*Footer*/
 
 #contact{
     
@@ -441,21 +295,3 @@ li > a{
 }
 
 
-
-@media(max-width: 100px){
-    html{ 
-        font-size:100%;
-    }
-}
-@media(max-width: 1000px){
-    html{
-        font-size: 80% !important;
-    }
-}
-    
-@media(max-width: 500px){
-    html{
-        font-size:60% !important;
-        
-    }
-}
