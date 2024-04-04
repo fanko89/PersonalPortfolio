@@ -1,12 +1,13 @@
 :root {
   --white: rgb(255, 255, 255);
-  --brown: rgb(112, 84, 24);
-  --tan: rgb(100, 84, 50);
+  --brown: rgb(132, 112, 69);
+  --clay: rgb(125, 119, 105);
+  --sand: rgb(172, 159, 131);
   --light_tan: rgba(158, 139, 102, 0.267);
   --hover:  rgba(218, 218, 218, 0.144);
   --blue: rgb(140, 163, 157);
   --black: rgb(17, 19, 20);
-  --gray: rgb(179, 179, 179);   
+  --gray: rgb(179, 179, 179);
 }
 
 * {
@@ -21,7 +22,7 @@ html {
   background-color: var(--black);
 }
 
-/* Navigation */
+/* Navigation--------------------------------------------------------------*/
 #navbar {
   overflow: hidden;
   display: flex;
@@ -30,7 +31,8 @@ html {
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: var(--tan);
+  background-color:var(--gray);
+    background-image: linear-gradient(180deg, rgb(96, 154, 161), rgba(72, 78, 40, 0.349));
 }
 
 .nav-list {
@@ -41,7 +43,7 @@ html {
 }
 
 .nav_text {
-  font-family: 'Permanent Marker', cursive;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
   color: var(--white);
   display: block;
@@ -54,7 +56,7 @@ html {
 .nav-list a:hover {
   background-color: var(--hover);
 }
-/*layout*/
+/*layout--------------------------------------------------------*/
 
 main{
   font-family: fantasy;
@@ -296,11 +298,18 @@ to {
 }
 
 
-/* Footer */
+/* Footer-----------------------------------------------------------*/
 footer {
   clear: both;
   position: relative;
   z-index: 2;
+}
+.footer_text {
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  text-align: center;
+ text-shadow: 1px 1.5px 1px var(--white);
 }
 
 #contact {
@@ -309,13 +318,13 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--gray);
-  background-image: linear-gradient(180deg, rgba(72, 78, 40, 0.349), rgb(96, 154, 161));
+  background-image: linear-gradient(30deg, var(--clay),var(--sand),var(--brown));
   height: 60vh;
 }
 
 #contact_info {
-  color: var(--black);
-  font-size: 110%;
+  color: var(--white);
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -332,3 +341,4 @@ footer {
   text-shadow: 1.5px 2px 2px #1f1f1f;
   transition: transform 0.2s ease-out;
 }
+

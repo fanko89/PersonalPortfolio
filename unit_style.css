@@ -3,8 +3,9 @@ https://gallant-carson-0e1470.netlify.app/ */
 
 :root {
     --white: rgb(255, 255, 255);
-    --brown: rgb(112, 84, 24);
-    --tan: rgb(100, 84, 50);
+    --brown: rgb(132, 112, 69);
+    --clay: rgb(125, 119, 105);
+    --sand: rgb(172, 159, 131);
     --light_tan: rgba(158, 139, 102, 0.267);
     --hover:  rgba(218, 218, 218, 0.144);
     --blue: rgb(140, 163, 157);
@@ -36,45 +37,42 @@ html{
 
 
 
-/*navigation*/
-#navbar{
-    
-    overflow:hidden;
-    display:flex;
+/* Navigation--------------------------------------------------------*/
+#navbar {
+    overflow: hidden;
+    display: flex;
     justify-content: flex-end;
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     z-index: 10;
-    background-color:var(--tan);
-
-
-}
-
-.nav-list{
-    
+    background-color:var(--gray);
+      background-image: linear-gradient(180deg, rgb(96, 154, 161), rgba(72, 78, 40, 0.349));
+  }
+  
+  .nav-list {
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    color: var(--white) ;  
-}
-    
-.nav_text {
-    font-family: 'Permanent Marker', cursive;
+    color: var(--white);
+  }
+  
+  .nav_text {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
-    color:var(--white);
+    color: var(--white);
     display: block;
     padding: 12px;
     font-size: 1.9em;
     text-shadow: 1px 1px 2px #3d3d3d;
     transition: transform 0.2s ease-out;  
-}
+  }
+  
+  .nav-list a:hover {
+    background-color: var(--hover);
+  }
 
-.nav-list a:hover{
-    background-color:var(--hover);
-}
-
-/*layout*/
+/*layout---------------------------------------------------------------*/
 
 
 @media(max-width: 100px){
@@ -156,7 +154,7 @@ li > a{
 
 
 
-/*Content*/
+/*Content----------------------------------------------------------------*/
 
 .resume{
     padding-top: 3rem;
@@ -181,7 +179,7 @@ li > a{
 #projects{
     
     display: flex;
-  
+  margin-top: -.3rem;
     flex-wrap:wrap;
     align-items: center;
     background-color:var(--light_tan);
@@ -210,7 +208,7 @@ li > a{
 
 }
 #projects p{
-   padding-top: 4rem;
+   padding-top: 3rem;
     font-size: 40px;
     width:70%;
     padding-bottom: 4rem;
@@ -258,40 +256,48 @@ figcaption > span {
   } 
 
 
-
-/*Footer*/
-
-#contact{
-    
+/* Footer-----------------------------------------------------------*/
+footer {
+    clear: both;
+    position: relative;
+    z-index: 2;
+  }
+  .footer_text {
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    text-align: center;
+   text-shadow: 1px 1.5px 1px var(--white);
+  }
+  
+  #contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:var(--gray);
-    background-image: linear-gradient(180deg,  rgba(72, 78, 40, 0.349), rgb(96, 154, 161));
+    background-color: var(--gray);
+    background-image: linear-gradient(30deg, var(--clay),var(--sand),var(--brown));
     height: 60vh;
-}
-#contact_info{
-    color: var(--black);
-    font-size: 110%;
+  }
+  
+  #contact_info {
+    color: var(--white);
+    font-size: 1.5em;
     text-align: center;
-    
-}
-
-.contact-links {
+  }
+  
+  .contact-links {
     display: flex; 
-
-    
-}
-.contact-links a {
+  }
+  
+  .contact-links a {
     padding-top: 35px;
     font-size: 1.4em;
-    margin:1em;
+    margin: 1em;
     color: var(--white);
     flex-direction: row;
     text-shadow: 1.5px 2px 2px #1f1f1f;
     transition: transform 0.2s ease-out;
-    
-}
-
+  }
+  
 
